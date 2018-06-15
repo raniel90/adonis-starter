@@ -38,7 +38,18 @@ class GenericController {
         let dataFinded
         const data = options.request.only(options.fields)
 
-        await this.validate(data, options.validate)
+        try {
+            let status = await this.validate(data, options.validate)
+
+            if (status && status.error) {
+                return status;
+            }
+        } catch (e) {
+            return {
+                error: 'ERROR_ON_VALIDATE_CREATE',
+                detail: JSON.stringify(e)
+            }
+        }
 
         try {
             dataFinded = await options.instance.findOrFail(options.params.id)
