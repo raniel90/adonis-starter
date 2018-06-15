@@ -18,7 +18,7 @@ class ExceptionHandler {
    *
    * @return {void}
    */
-  async handle(error, { request, response, session, view }) {
+  async handle(error, { response }) {
     if (error.code === 'E_INVALID_JWT_TOKEN') {
       response.send({
         error: error.code

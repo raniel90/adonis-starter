@@ -22,8 +22,6 @@ class UserController {
       return response.redirect('back')
     }
 
-    // Deleting the confirmation field since we don't
-    // want to save it
     delete data.password_confirmation
   
     return await User.create(data)

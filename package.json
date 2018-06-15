@@ -1,8 +1,8 @@
 {
-  "name": "adonis-blog-demo",
+  "name": "adonis-quickstart",
   "version": "4.0.0",
   "adonis-version": "4.0.0",
-  "description": "AdonisJs Blog Demo Application",
+  "description": "Raniel - Adonis Quickstart",
   "scripts": {
     "start": "node server.js",
     "test": "node ace test --timeout=0",

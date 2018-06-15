@@ -17,44 +17,6 @@ module.exports = {
 
   /*
   |--------------------------------------------------------------------------
-  | Session
-  |--------------------------------------------------------------------------
-  |
-  | Session authenticator makes use of sessions to authenticate a user.
-  | Session authentication is always persistent.
-  |
-  */
-  session: {
-    serializer: 'lucid',
-    model: 'App/Models/User',
-    scheme: 'session',
-    uid: 'username',
-    password: 'password'
-  },
-
-  /*
-  |--------------------------------------------------------------------------
-  | Basic Auth
-  |--------------------------------------------------------------------------
-  |
-  | The basic auth authenticator uses basic auth header to authenticate a
-  | user.
-  |
-  | NOTE:
-  | This scheme is not persistent and users are supposed to pass
-  | login credentials on each request.
-  |
-  */
-  basic: {
-    serializer: 'lucid',
-    model: 'App/Models/User',
-    scheme: 'basic',
-    uid: 'email',
-    password: 'password'
-  },
-
-  /*
-  |--------------------------------------------------------------------------
   | Jwt
   |--------------------------------------------------------------------------
   |
