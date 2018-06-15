@@ -46,7 +46,7 @@ class GenericController {
             }
         } catch (e) {
             return {
-                error: 'ERROR_ON_VALIDATE_CREATE',
+                error: 'ERROR_ON_VALIDATE_UPDATE',
                 detail: JSON.stringify(e)
             }
         }
